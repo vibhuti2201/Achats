@@ -1,5 +1,6 @@
 package com.example.achats.di
 
+import com.google.firebase.auth.FirebaseAuth
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,5 +13,5 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideFirebaseAuthentication
+    fun provideFirebaseAuthentication()= FirebaseAuth.getInstance()
 }
