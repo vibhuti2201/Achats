@@ -84,7 +84,7 @@
             android:layout_marginTop="15dp"/>
 
         <EditText
-            android:id="@+id/ed_email"
+            android:id="@+id/edEmailRegister"
             android:layout_width="0dp"
             android:layout_height="@dimen/edittextHeight"
             app:layout_constraintStart_toStartOf="@id/guidelineleft"
@@ -96,12 +96,12 @@
             android:layout_marginTop="15dp"/>
 
         <EditText
-            android:id="@+id/ed_password"
+            android:id="@+id/edPasswordRegister"
             android:layout_width="0dp"
             android:layout_height="@dimen/edittextHeight"
             app:layout_constraintStart_toStartOf="@id/guidelineleft"
             app:layout_constraintEnd_toEndOf="@id/guidelineright"
-            app:layout_constraintTop_toBottomOf="@id/ed_email"
+            app:layout_constraintTop_toBottomOf="@id/edEmailRegister"
             style="@style/editText"
             android:hint="Password"
             android:inputType="textPassword"
@@ -131,7 +131,7 @@
             android:layout_height="@dimen/mediumButtonHeight"
             android:layout_marginTop="16dp"
             style="@style/blueButtonStyle"
-            app:layout_constraintTop_toBottomOf="@id/ed_password"
+            app:layout_constraintTop_toBottomOf="@id/edPasswordRegister"
             app:layout_constraintStart_toStartOf="@+id/guidelineleft"
             app:layout_constraintEnd_toEndOf="@+id/guidelineright"
             android:text="Register"/>
