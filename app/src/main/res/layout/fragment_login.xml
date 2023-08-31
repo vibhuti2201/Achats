@@ -110,7 +110,7 @@
             style="@style/blueButtonStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:text="Login"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
@@ -166,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.91" />
+            app:layout_constraintGuide_begin="374dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidlelinebottom"
