@@ -26,6 +26,7 @@ class RegisterFragment : Fragment() {
 
 private lateinit var binding:FragmentRegisterBinding
 private  val viewModel by viewModels<RegisterViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,6 +40,8 @@ private  val viewModel by viewModels<RegisterViewModel>()
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
          binding.buttonRegisterRegister.setOnClickListener {
+             buttonRegisterRegister.spinningBarColor = resources.getColor(R.color.white)
+             buttonRegisterRegister.spinningBarWidth = resources.getDimension(R.dimen._3sp)
              val user= User(
                  edFirstName.text.toString().trim(),
                  edLastName.text.toString().trim(),
