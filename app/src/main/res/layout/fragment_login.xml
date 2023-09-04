@@ -106,7 +106,7 @@
             app:layout_constraintTop_toBottomOf="@id/etPasswordLogin" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonRegisterRegister"
+            android:id="@+id/buttonLoginLogin"
             style="@style/blueButtonStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
