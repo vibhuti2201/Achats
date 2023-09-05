@@ -20,6 +20,7 @@ private val firebaseAuth: FirebaseAuth
     val login=_login.asSharedFlow()
 
     fun login(email: String,password:String){
+        viewModelScope.launch { _login.emit(Resource.Loading()) }
         firebaseAuth.signInWithEmailAndPassword(
             email,password
         ).addOnSuccessListener {

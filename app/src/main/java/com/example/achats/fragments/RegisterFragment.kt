@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.achats.R
 import com.example.achats.data.User
 import com.example.achats.databinding.FragmentRegisterBinding
@@ -38,6 +39,10 @@ private  val viewModel by viewModels<RegisterViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.tvDontHaveAnAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_login2)
+        }
         binding.apply {
          binding.buttonRegisterRegister.setOnClickListener {
              buttonRegisterRegister.spinningBarColor = resources.getColor(R.color.white)

@@ -8,4 +8,5 @@
     <dimen name="mediumButtonHeight">55dp</dimen>
     <dimen name="edittextHeight">60dp</dimen>
     <dimen name="_3sp">3dp</dimen>
+    <dimen name="_3sdp">3dp</dimen>
 </resources>
