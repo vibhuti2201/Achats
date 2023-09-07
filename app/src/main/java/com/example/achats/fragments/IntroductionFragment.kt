@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.achats.R
+import com.example.achats.databinding.FragmentAccountOptionsBinding
 import com.example.achats.databinding.FragmentIntroductionBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,7 +22,8 @@ private lateinit var binding: FragmentIntroductionBinding
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_introduction, container, false)
+        binding= FragmentIntroductionBinding.inflate(inflater)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
