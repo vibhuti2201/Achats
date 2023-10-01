@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.achats.R
 import com.example.achats.activities.ShoppingActivity
 import com.example.achats.databinding.FragmentLoginBinding
+import com.example.achats.dialog.setupBottomSheetDialog
 import com.example.achats.util.Resource
 import com.example.achats.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,6 +44,12 @@ class Login : Fragment(R.layout.fragment_login) {
                 val email= etEmailLogin.text.toString().trim()
                 val password= etPasswordLogin.text.toString()
                 viewModel.login(email,password)
+            }
+        }
+
+        binding.tvForgotPasswordLogin.setOnClickListener {
+            setupBottomSheetDialog { email->
+
             }
         }
         lifecycleScope.launchWhenStarted {

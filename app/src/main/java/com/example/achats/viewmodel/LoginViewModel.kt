@@ -37,4 +37,8 @@ private val firebaseAuth: FirebaseAuth
         }
     }
 
+    fun resetPassword(email: String)
+    {
+
+    }
 }
