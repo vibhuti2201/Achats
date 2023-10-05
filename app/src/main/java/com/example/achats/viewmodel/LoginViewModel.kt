@@ -19,6 +19,9 @@ private val firebaseAuth: FirebaseAuth
     private val _login= MutableSharedFlow<Resource<FirebaseUser>>()
     val login=_login.asSharedFlow()
 
+    private val _resetPassword= MutableSharedFlow<String>()
+    private val resetPassword= _resetPassword.asSharedFlow()
+
     fun login(email: String,password:String){
         viewModelScope.launch { _login.emit(Resource.Loading()) }
         firebaseAuth.signInWithEmailAndPassword(
@@ -39,6 +42,8 @@ private val firebaseAuth: FirebaseAuth
 
     fun resetPassword(email: String)
     {
-
+      viewModelScope.launch {
+          _resetPassword.emit(Resource.Loading().toString())
+      }
     }
 }
