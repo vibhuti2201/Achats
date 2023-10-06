@@ -44,6 +44,7 @@ private val firebaseAuth: FirebaseAuth
     {
       viewModelScope.launch {
           _resetPassword.emit(Resource.Loading().toString())
+//          reset
       }
     }
 }
