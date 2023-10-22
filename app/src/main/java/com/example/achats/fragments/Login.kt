@@ -16,6 +16,7 @@ import com.example.achats.databinding.FragmentLoginBinding
 import com.example.achats.dialog.setupBottomSheetDialog
 import com.example.achats.util.Resource
 import com.example.achats.viewmodel.LoginViewModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -49,7 +50,25 @@ class Login : Fragment(R.layout.fragment_login) {
 
         binding.tvForgotPasswordLogin.setOnClickListener {
             setupBottomSheetDialog { email->
+viewModel.resetPassword(email)
+            }
+        }
 
+        lifecycleScope.launchWhenStarted {
+            viewModel.resetPassword.collect{
+                when(it){
+                    is Resource.Loading->{
+
+                    }
+                    is Resource.Success->{
+                       Snackbar.make(requireView(),"Reset link was sent to your email",Snackbar.LENGTH_LONG).show()
+                    }
+
+                    is Resource.Error->{
+
+                    }
+                    else ->Unit
+                }
             }
         }
         lifecycleScope.launchWhenStarted {
