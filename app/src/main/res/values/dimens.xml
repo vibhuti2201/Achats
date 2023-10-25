@@ -9,4 +9,5 @@
     <dimen name="edittextHeight">60dp</dimen>
     <dimen name="_3sp">3dp</dimen>
     <dimen name="_3sdp">3dp</dimen>
+    <dimen name="_10sdp">10dp</dimen>
 </resources>

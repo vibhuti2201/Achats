@@ -1,4 +1,4 @@
-package com.example.achats.fragments
+package com.example.achats.fragments.loginRegister
 
 import android.content.Intent
 import android.os.Bundle
@@ -65,7 +65,7 @@ viewModel.resetPassword(email)
                     }
 
                     is Resource.Error->{
-
+                        Snackbar.make(requireView(),"Error: ${it.message}",Snackbar.LENGTH_LONG).show()
                     }
                     else ->Unit
                 }

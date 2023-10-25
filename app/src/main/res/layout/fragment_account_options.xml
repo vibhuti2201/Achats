@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.AccountOptionsFragment">
+    tools:context=".fragments.loginRegister.AccountOptionsFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
             app:layout_constraintStart_toStartOf="@id/tvQuality"
             app:layout_constraintEnd_toEndOf="@id/tvQuality"
             android:layout_marginTop="10dp"
-            android:text="Login !"/>
+            android:text="Login"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
