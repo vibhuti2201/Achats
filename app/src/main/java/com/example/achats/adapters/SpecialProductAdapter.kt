@@ -5,12 +5,23 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.achats.data.Product
 import com.example.achats.databinding.SpecialRvItemBinding
 
 class SpecialProductAdapter:RecyclerView.Adapter<SpecialProductAdapter.SpecialProductViewHolder>() {
 
-    inner class SpecialProductViewHolder(private val binding:SpecialRvItemBinding):RecyclerView.ViewHolder(binding.root)
+    inner class SpecialProductViewHolder(private val binding:SpecialRvItemBinding):
+        RecyclerView.ViewHolder(binding.root){
+
+            fun bind(product: Product){
+             binding.apply {
+                 Glide.with(itemView).load(product.images[0]).into(imgSpecialRvItem)
+                 tvSpecialProductName.text= product.name
+                 tvSpecialProductPrice.text=product.price.toString()
+             }
+            }
+        }
 
     val diffCallback = object : DiffUtil.ItemCallback<Product>(){
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
@@ -33,11 +44,12 @@ class SpecialProductAdapter:RecyclerView.Adapter<SpecialProductAdapter.SpecialPr
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+       return  differ.currentList.size
     }
 
     override fun onBindViewHolder(holder: SpecialProductViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val product= differ.currentList[position]
+        holder.bind(product)
     }
 
 
