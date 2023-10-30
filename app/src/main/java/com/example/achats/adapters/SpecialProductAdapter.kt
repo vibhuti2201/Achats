@@ -38,7 +38,7 @@ class SpecialProductAdapter:RecyclerView.Adapter<SpecialProductAdapter.SpecialPr
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpecialProductViewHolder {
         return SpecialProductViewHolder(
             SpecialRvItemBinding.inflate(
-                LayoutInflater.from(parent.context),parent,null
+                LayoutInflater.from(parent.context),parent,false
             )
         )
     }
