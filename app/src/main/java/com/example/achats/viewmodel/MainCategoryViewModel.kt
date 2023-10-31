@@ -11,4 +11,5 @@ class MainCategoryViewModel  @Inject constructor(
 ): ViewModel(){
 
     private val specialProducts= MutableStateFlow<Resource>()
+    //comment
 }
