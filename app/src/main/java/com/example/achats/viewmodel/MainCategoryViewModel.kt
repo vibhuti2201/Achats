@@ -10,5 +10,5 @@ class MainCategoryViewModel  @Inject constructor(
     private val firestore: FirebaseFirestore
 ): ViewModel(){
 
-   private val specialProducts= MutableStateFlow<Resource>()
+//   private val specialProducts= MutableStateFlow<Resource>()
 }
