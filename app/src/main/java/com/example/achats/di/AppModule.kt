@@ -1,5 +1,6 @@
 package com.example.achats.di
 
+import android.app.Application
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -20,4 +21,5 @@ object AppModule {
     @Provides
     @Singleton
     fun provideFirebaseFirestoreDatabase()= Firebase.firestore
+
 }

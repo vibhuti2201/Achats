@@ -7,8 +7,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.achats.R
 import com.example.achats.databinding.ActivityShoppingBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
 
 val binding by lazy {
