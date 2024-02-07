@@ -72,7 +72,7 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
         binding.rvSpecialProducts.apply {
             layoutManager= LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         }
-        it is the main category fragment
+//comment
 
     }
 }
