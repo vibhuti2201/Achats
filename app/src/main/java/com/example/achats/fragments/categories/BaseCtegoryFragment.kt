@@ -47,6 +47,6 @@ open class BaseCtegoryFragment: Fragment(R.layout.fragment_base_category) {
                 LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
             adapter=offerAdapter
         }
-
+//new
     }
 }
